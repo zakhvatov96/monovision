@@ -42,6 +42,16 @@ html {
 	font-family: "Inter", sans-serif;
 }
 
+.promo::selection {
+	background-color: #fff;
+	color: #000;
+}
+
+.about::selection, .works::selection, .inspiration::selection {
+	background-color: #000;
+	color: #fff;
+}
+
 .container {
 	padding: 0 var(--container-padding-inline);
 }
@@ -51,6 +61,19 @@ html {
 	font-size: 40px;
 	color: var(--dark-color);
 	text-align: center;
+	span {
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			display: block;
+			right: 0;
+			bottom: 1px;
+			width: 75px;
+			height: 2px;
+			background-color: #000;
+		}
+	}
 }
 
 .promo {
@@ -97,6 +120,7 @@ html {
 }
 
 .promo__address {
+	position: relative;
 	margin-top: 100px;
 	font-weight: 100;
 	font-size: 16px;
@@ -107,6 +131,16 @@ html {
 	a {
 		text-decoration: none;
 		color: inherit;
+	}
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 49px;
+		left: -45px;
+		top: -17px;
+		background: url('../icons/arrow.svg') center center/cover no-repeat;
 	}
 }
 
@@ -165,11 +199,32 @@ html {
 	}
 
 	li {
+		position: relative;
 		list-style-type: none;
 		margin-top: 10px;
 		font-weight: 400;
 		font-size: 16px;
 		color: var(--dark-color);
+		&:first-child::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			left: -30px;
+			top: 2px;
+			background: url('../icons/camera.svg') center center / cover no-repeat;
+		}
+		&:nth-child(3)::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 15px;
+			height: 15px;
+			left: -30px;
+			top: 2px;
+			background: url('../icons/edit.svg') center center / cover no-repeat;
+		}
 	}
 }
 
