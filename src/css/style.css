@@ -337,10 +337,11 @@ html {
 	width: 32px;
 	height: 32px;
 	background: rgba(217, 217, 217, 0);
-	img {
+	color: #fff;
+	/* span {
 		width: 22px;
 		height: 22px;
-	}
+	} */
 }
 
 .footer__address {
