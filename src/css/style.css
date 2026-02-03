@@ -238,6 +238,9 @@ html {
 .about {
 	background-color: var(--light-color);
 	padding-top: 80px;
+	@media screen and (max-width: 576px) {
+		padding-top: 50px;	
+	}
 }
 
 .about__title {
@@ -259,12 +262,30 @@ html {
 	@media screen and (max-width: 1440px) {
 		width: 100%;		
 	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 24px;		
+	}
+
+	@media screen and (max-width: 576px) {
+		font-size: 16px;		
+	}
 }
 
 .services {
 	display: flex;
 	column-gap: 10px;
 	margin-top: 80px;
+	@media screen and (max-width: 768px) {
+		margin-top: 40px;
+		flex-direction: column;
+		row-gap: 40px;
+	}
+
+	@media screen and (max-width: 576px) {
+		margin-top: 20px;
+		row-gap: 20px;
+	}
 }
 
 .services__items {
@@ -302,6 +323,16 @@ html {
 			background: url('../icons/edit.svg') center center / cover no-repeat;
 		}
 	}
+	@media screen and (max-width: 768px) {
+		width: 100%	
+	}
+
+	@media screen and (max-width: 576px) {
+		& li {
+			font-size: 14px;
+			margin-top: 5px;
+		}	
+	}
 }
 
 .services__item-subtitle {
@@ -309,6 +340,9 @@ html {
 	font-weight: 400;
 	font-size: 16px;
 	color: var(--dark-color);
+	@media screen and (max-width: 576px) {
+		font-size: 12px;		
+	}
 }
 
 .services__text {
@@ -317,6 +351,12 @@ html {
 	font-size: 20px;
 	letter-spacing: 0.02em;
 	color: var(--dark-color);
+	@media screen and (max-width: 768px) {
+		width: 100%;	
+	}
+	@media screen and (max-width: 576px) {
+		font-size: 12px;		
+	}
 }
 
 .works {
